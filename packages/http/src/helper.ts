@@ -1,0 +1,56 @@
+/*
+ * @description:
+ * @Author: liwg
+ * @Date: 2022-04-09 14:38:25
+ * @LastEditors: 李文光 1450551498@qq.com
+ * @LastEditTime: 2022-11-07 17:02:08
+ */
+import isString from 'lodash-es/isString'
+import isPlainObject from 'lodash-es/isPlainObject'
+
+const DATE_TIME_FORMAT = 'YYYY-MM-DD HH:mm:ss'
+
+export function joinTimestamp<T extends boolean>(
+  join: boolean,
+  restful: T
+): T extends true ? string : object
+
+export function joinTimestamp(join: boolean, restful = false): string | object {
+  if (!join) {
+    return restful ? '' : {}
+  }
+  const now = Date.now()
+  if (restful) {
+    return `?_t=${now}`
+  }
+  return { _t: now }
+}
+
+/**
+ * @description: Format request parameter time
+ */
+export function formatRequestDate(params: Record<string, any>) {
+  if (Object.prototype.toString.call(params) !== '[object Object]') {
+    return
+  }
+
+  for (const key in params) {
+    const format = params[key]?.format ?? null
+    if (format && typeof format === 'function') {
+      params[key] = params[key].format(DATE_TIME_FORMAT)
+    }
+    if (isString(key)) {
+      const value = params[key]
+      if (value) {
+        try {
+          params[key] = isString(value) ? value.trim() : value
+        } catch (error: any) {
+          throw new Error(error)
+        }
+      }
+    }
+    if (isPlainObject(params[key])) {
+      formatRequestDate(params[key])
+    }
+  }
+}

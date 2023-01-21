@@ -1,0 +1,23 @@
+{
+  "name": "@ns/utils",
+  "version": "1.0.3",
+  "description": "",
+  "license": "ISC",
+  "author": "liwg",
+  "main": "./index.ts",
+  "module": "./index.ts",
+  "scripts": {
+    "build": "vite build"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@vueuse/core": "^9.10.0",
+    "lodash-es": "^4.17.21",
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.6"
+  }
+}

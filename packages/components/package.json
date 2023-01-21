@@ -1,0 +1,25 @@
+{
+  "name": "@ns/ui",
+  "version": "1.0.3",
+  "description": "",
+  "license": "ISC",
+  "author": "liwg",
+  "main": "index.ts",
+  "scripts": {
+    "build": "vite build"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "dependencies": {
+    "ant-design-vue": "^3.2.15",
+    "dayjs": "^1.11.7",
+    "gulp": "^4.0.2",
+    "vue": "^3.2.45",
+    "vue-pdf-embed": "^1.1.5",
+    "vue-picture-cropper": "^0.6.1",
+    "vue3-pdfjs": "^0.1.6",
+    "vue3-slide-verify": "^1.1.4"
+  }
+}

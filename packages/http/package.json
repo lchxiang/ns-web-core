@@ -1,0 +1,14 @@
+{
+  "name": "@ns/http",
+  "version": "1.0.3",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "build": "vite build"
+  },
+  "author": "liwg",
+  "license": "ISC",
+  "dependencies": {
+    "@ns/utils": "workspace:*"
+  }
+}

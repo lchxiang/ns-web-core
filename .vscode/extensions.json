@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+      "Vue.volar",
+      "esbenp.prettier-vscode",
+      "stylelint.vscode-stylelint",
+      "dbaeumer.vscode-eslint",
+      "antfu.unocss"
+    ]
+  }
+  
