@@ -11,7 +11,7 @@
     "build:all": "pnpm build:ui && pnpm build:utils && pnpm build:http"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@lchxiang/eslint-config": "^0.0.6",
     "@lchxiang/stylelint-config": "^1.0.5",
