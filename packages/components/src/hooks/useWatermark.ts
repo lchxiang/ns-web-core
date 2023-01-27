@@ -1,6 +1,6 @@
 // import throttle from 'lodash-es/throttle'
 import uniqueId from 'lodash-es/uniqueId'
-import { unref } from 'vue'
+import { getCurrentInstance, onBeforeUnmount, shallowRef, unref } from 'vue'
 type attr = {
   font?: string
   fillStyle?: string

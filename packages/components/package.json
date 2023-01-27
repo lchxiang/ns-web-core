@@ -1,8 +1,8 @@
 {
   "name": "@ns/ui",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "",
-  "license": "ISC",
+  "license": "MIT",
   "author": "liwg",
   "main": "index.ts",
   "scripts": {
@@ -13,13 +13,20 @@
     "lib"
   ],
   "dependencies": {
+    "@ns/http": "workspace:*",
     "ant-design-vue": "^3.2.15",
     "dayjs": "^1.11.7",
     "gulp": "^4.0.2",
+    "lodash-es": "^4.17.21",
+    "qs": "^6.11.0",
     "vue": "^3.2.45",
     "vue-pdf-embed": "^1.1.5",
     "vue-picture-cropper": "^0.6.1",
     "vue3-pdfjs": "^0.1.6",
     "vue3-slide-verify": "^1.1.4"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.6",
+    "vue-types": "^5.0.2"
   }
 }

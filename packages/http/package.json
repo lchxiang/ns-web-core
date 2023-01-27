@@ -1,14 +1,21 @@
 {
   "name": "@ns/http",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "",
   "main": "index.ts",
   "scripts": {
     "build": "vite build"
   },
+  "files": [
+    "dist"
+  ],
   "author": "liwg",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@ns/utils": "workspace:*"
+    "@ns/utils": "workspace:*",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.6"
   }
 }

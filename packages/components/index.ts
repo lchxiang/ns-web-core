@@ -1,12 +1,12 @@
 import * as components from './src/components'
-import { App } from 'vue'
+import type { App } from 'vue'
 export default {
-  install(app:App) {
-    Object.keys(components).forEach(key => {
+  install(app: App) {
+    Object.keys(components).forEach((key) => {
       /* @ts-ignore */
-      const component = components[key] 
+      const component = components[key]
       if (component.install) {
-        app.use(component);
+        app.use(component)
       }
     })
     return app

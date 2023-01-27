@@ -1,7 +1,6 @@
 import axios from 'axios'
 import qs from 'qs'
-import isFunction from 'lodash-es/isFunction'
-import cloneDeep from 'lodash-es/cloneDeep'
+import { cloneDeep, isFunction } from 'lodash-es'
 
 import { ContentTypeEnum, RequestEnum } from './enums'
 import { AxiosCanceler } from './axiosCancel'

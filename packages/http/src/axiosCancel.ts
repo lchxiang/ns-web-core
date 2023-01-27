@@ -6,7 +6,7 @@
  */
 
 import axios from 'axios'
-import isFunction from 'lodash-es/isFunction'
+import { isFunction } from 'lodash-es'
 import type { AxiosRequestConfig, Canceler } from 'axios'
 
 // Used to store the identification and cancellation function of each request

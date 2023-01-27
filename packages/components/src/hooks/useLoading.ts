@@ -5,9 +5,10 @@
  * @LastEditTime: 2022-12-15 14:13:59
  */
 import { unref } from 'vue'
-import { createLoading } from '@ns/ui/src/loading/createLoading'
+import { createLoading } from '../loading/createLoading'
+import type { ElRef, Fn } from '../types'
 import type { Ref } from 'vue'
-import type { LoadingProps } from '@ns/ui/src/loading/index'
+import type { LoadingProps } from '../loading/index'
 
 export interface UseLoadingOptions {
   target?: any
@@ -22,7 +23,6 @@ export function useLoading(
 ): [Fn, Fn, (arg0: string) => void] {
   let props: Partial<LoadingProps>
   let target: HTMLElement | Ref<ElRef> = document.body
-
   if (Reflect.has(opt, 'target') || Reflect.has(opt, 'props')) {
     const options = opt as Partial<UseLoadingOptions>
     props = options.props || {}

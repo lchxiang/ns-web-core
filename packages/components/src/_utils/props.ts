@@ -1,6 +1,6 @@
 import type { PropType } from 'vue'
 import type { VueTypeDef, VueTypeValidableDef } from 'vue-types'
-
+//@ts-ignore
 export const initDefaultProps = <T>(
   types: T,
   defaultProps: {
@@ -15,13 +15,20 @@ export const initDefaultProps = <T>(
 ): T => {
   const propTypes: T = { ...types }
   Object.keys(defaultProps).forEach((k) => {
-    const prop = propTypes[k] as VueTypeValidableDef
+    //@ts-ignore
+    const prop = propTypes[k] as unknown as VueTypeValidableDef
     if (prop) {
       if (prop.type || prop.default) {
+        //@ts-ignore
+
         prop.default = defaultProps[k]
       } else if (prop.def) {
+        //@ts-ignore
+
         prop.def(defaultProps[k])
       } else {
+        //@ts-ignore
+
         propTypes[k] = { type: prop, default: defaultProps[k] }
       }
     } else {

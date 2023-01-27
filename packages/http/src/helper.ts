@@ -5,8 +5,7 @@
  * @LastEditors: 李文光 1450551498@qq.com
  * @LastEditTime: 2022-11-07 17:02:08
  */
-import isString from 'lodash-es/isString'
-import isPlainObject from 'lodash-es/isPlainObject'
+import { isPlainObject, isString } from 'lodash-es'
 
 const DATE_TIME_FORMAT = 'YYYY-MM-DD HH:mm:ss'
 

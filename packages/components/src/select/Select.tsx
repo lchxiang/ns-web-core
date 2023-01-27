@@ -6,13 +6,13 @@
  * @FilePath: \ns-web-core\packages\ui\src\select\Select.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
-import { defineComponent, unref } from 'vue'
+import { computed, defineComponent, unref } from 'vue'
 import { Select } from 'ant-design-vue'
 import { useDict } from '../hooks/useDict'
 import { type DictProps, dictProps } from '../dict-props'
 import { useNsProviderContext } from '../hooks/useNsContext'
 import type { SelectProps } from 'ant-design-vue'
-export type NsCheckboxProps = DictProps & SelectProps
+export type NsSelectProps = DictProps & SelectProps
 export type NsSelectInstance = InstanceType<typeof NsSelect>
 
 const NsSelect = defineComponent({

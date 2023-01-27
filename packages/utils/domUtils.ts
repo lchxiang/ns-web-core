@@ -1,4 +1,4 @@
-import upperFirst from 'lodash-es/upperFirst'
+import { upperFirst } from 'lodash-es'
 import type { FunctionArgs } from '@vueuse/core'
 
 export interface ViewportOffsetResult {
@@ -159,7 +159,7 @@ export function off(
 
 /* istanbul ignore next */
 export function once(el: HTMLElement, event: string, fn: EventListener): void {
-  const listener = function (this: any,...args: [Event]) {
+  const listener = function (this: any, ...args: [Event]) {
     if (fn) {
       fn.apply(this, args)
     }

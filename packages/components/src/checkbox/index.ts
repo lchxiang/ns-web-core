@@ -1,5 +1,6 @@
 import Checkbox from './Checkbox'
 import type { App, Plugin } from 'vue'
+export type { NsCheckboxProps, NsCheckboxInstance } from './Checkbox'
 
 /* istanbul ignore next */
 Checkbox.install = function (app: App) {

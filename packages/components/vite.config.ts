@@ -20,14 +20,21 @@ export default (): UserConfig => {
       target: 'modules',
       //打包文件目录
       outDir: 'es',
-      emptyOutDir:false,
+      emptyOutDir: false,
       //压缩
       minify: true,
       //css分离
       //cssCodeSplit: true,
       rollupOptions: {
         //忽略打包vue文件
-        external: ['vue', 'ant-design-vue', /\.less/],
+        external: [
+          'vue',
+          'ant-design-vue',
+          'lodash-es',
+          'vue-types',
+          '@ant-design/icons-vue',
+          /\.less/
+        ],
         input: ['index.ts'],
         output: [
           {
@@ -36,6 +43,7 @@ export default (): UserConfig => {
             entryFileNames: '[name].mjs',
             //让打包目录和我们目录对应
             preserveModules: true,
+            preserveModulesRoot: resolve(__dirname),
             exports: 'named',
             //配置打包根目录
             dir: resolve(__dirname, './ns-ui/es')
@@ -46,6 +54,7 @@ export default (): UserConfig => {
             entryFileNames: '[name].js',
             //让打包目录和我们目录对应
             preserveModules: true,
+            preserveModulesRoot: resolve(__dirname),
             exports: 'named',
             //配置打包根目录
             dir: resolve(__dirname, './ns-ui/lib')
@@ -68,7 +77,7 @@ export default (): UserConfig => {
         outputDir: [resolve(__dirname, './ns-ui/es/src'), resolve(__dirname, './ns-ui/lib/src')],
         //指定使用的tsconfig.json为我们整个项目根目录下掉,如果不配置,你也可以在components下新建tsconfig.json
         tsConfigFilePath: '../../tsconfig.json'
-      }),
+      })
     ]
   }
 }
