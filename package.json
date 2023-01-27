@@ -1,10 +1,11 @@
 {
   "name": "ns-web-core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.",
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "release": "bumpp package.json packages/*/package.json && pnpm publish -r",
+    "release": "bumpp package.json packages/*/package.json && pnpm publish -r --access public",
     "build:ui": "gulp -f packages/components/script/build/gulpfile.ts",
     "build:utils": "cd packages/utils && pnpm run build",
     "build:http": "cd packages/http && pnpm run build",
